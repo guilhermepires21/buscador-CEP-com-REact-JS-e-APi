@@ -11,7 +11,7 @@ function App() {
 
   async function handleSearch() {
 
-    if (input === '') {
+    if (input === '') { 
       alert("Preencha algum cep!")
       return;
     }
