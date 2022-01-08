@@ -1,0 +1,109 @@
+
+.container
+{
+    height: 100vh;                /* pega 100% tela de cima pra baixo */
+    display: flex;                /* vou passar pra ela um display - flex , pra gente poder trabalhar com fleboxx */
+    justify-content: center;
+    align-items: center;          /* os items vão pro meio da tela desssa class */
+    flex-direction: column;       /* os items ficão posição correta */
+    background: linear-gradient(#121212, #212b46); /* cor do fundo da page */
+} 
+
+.title
+{
+    font-size: 85px;              /* tamanho da fonte , do nome buscae cep */
+    color: white;
+    animation: flipTitle 2s;
+}
+
+@keyframes flipTitle {            /* animação */ /* Title eo inicial */
+    from{    
+        transform: rotateX(90deg);                    
+
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+   }
+
+.containerInput
+{
+    background-color: rgba(255,255,255, 0.2);
+    padding: 15px;
+    margin: 34px 0;                          /* 34px 0 aplica en cima e en baixo */
+    display: flex;                          /* pra ficar um ao lado do outro */
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px rgba(0,0,0, 0.5);  /* leve sombra do campo cinza */
+
+}
+
+.containerInput input
+{
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: white;
+    outline: none;                        /* tira linha azul do navegador */
+    margin-right: 8px;                   /* pra afastar um pouco do botão*/
+}
+
+.containerInput input::placeholder   
+{
+    color: #ffffff;
+}
+
+.buttonSearch
+{
+    background-color: transparent; 
+    border: 0;                                /* transparencia no icon de pesquisar*/
+    display: flex;     
+    justify-content: center;                  /* pra alinhar comforme o nossa input */
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}    
+
+.buttonSearch:hover
+{
+    transform: scale(1.5);    /* pra almentar na animação */
+}
+
+.main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* pra ficar um item em baixo do outro */
+    background-color: #fff; /*cor de fundo do cep*/
+    width: 500px;             /* largura */
+    border-radius: 8px;
+}
+
+.main h2
+{
+    margin: 16px 0;     /* 16px pra cima 0 pros lados */
+    font-size: 39px;     /* tamanho font */
+}
+
+.main span /* cada item de baixo */
+{
+    margin-bottom: 16px;  /*para espaçar os span , items de baixo*/
+    font-weight: bold;
+}
+
+@media (max-width: 620px) {  /* ajustando pra outro tamanho de tela */
+   .title{
+       font-size: 60px;  
+   }
+   .main h2 {
+       font-size: 28px;
+   }
+   .main {
+       width: 80%;
+       min-height: 250px;
+   }
+
+ }
+
+
+
